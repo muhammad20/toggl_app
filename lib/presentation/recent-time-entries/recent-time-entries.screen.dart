@@ -154,7 +154,7 @@ class _DayName extends StatelessWidget {
         now.year == date.year) {
       _displayedDate = 'Yesterday';
     } else {
-      DateFormat formatter = DateFormat('dd-mm-yyyy');
+      DateFormat formatter = DateFormat('dd-MM-yyyy');
       _displayedDate = formatter.format(this.date);
     }
 
