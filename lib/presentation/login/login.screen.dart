@@ -76,6 +76,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ), () async {
                         LoginViewModel loginViewModel = await _bloc.signIn();
+                        if(loginViewModel == null) return;
                         if (loginViewModel.apiToken != null) {
                           this._dispose();
                           Navigator.of(context).pushReplacement(
